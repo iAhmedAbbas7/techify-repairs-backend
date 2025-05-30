@@ -1,0 +1,5 @@
+{
+    "username": "Gus Fring",
+    "password": "Gus123!",
+    "roles": ["Employee"]
+}

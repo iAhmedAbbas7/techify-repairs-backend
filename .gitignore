@@ -1,0 +1,35 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Lockfile (commit this for reproducible installs)
+# package-lock.json
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# OS-specific
+Thumbs.db
+
+# Miscellaneous
+*.local
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
