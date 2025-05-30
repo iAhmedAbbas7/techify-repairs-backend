@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   },
   avatar: {
     type: String,
-    default: "http://localhost:3500/uploads/AVATAR.png",
+    default: "",
   },
 });
 

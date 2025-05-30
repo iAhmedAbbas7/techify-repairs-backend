@@ -190,13 +190,10 @@ const updateUser = asyncHandler(async (req, res) => {
     }
   }
   // <----- Delete Avatar Logic ----- > //
-  const defaultAvatar =
-    "https://techify-repairs-api.onrender.com/uploads/AVATAR.png" ||
-    "http://localhost:5173/uploads/AVATAR.png";
   // Checking if the Delete Avatar Flag was Provided
   if (req.body.deleteAvatar === "true") {
     // If Users Avatar is not Default Avatar then Proceed
-    if (user.avatar && user.avatar !== defaultAvatar) {
+    if (user.avatar && user.avatar !== "") {
       // Splitting the Avatar Filename
       const parts = user.avatar.split("/uploads/");
       if (parts.length === 2) {
@@ -211,7 +208,7 @@ const updateUser = asyncHandler(async (req, res) => {
         }
       }
       // Setting the Avatar to Default Avatar after Deletion
-      user.avatar = defaultAvatar;
+      user.avatar = "";
     }
   }
   // If Roles are Provided
