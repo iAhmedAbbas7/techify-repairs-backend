@@ -190,7 +190,9 @@ const updateUser = asyncHandler(async (req, res) => {
     }
   }
   // <----- Delete Avatar Logic ----- > //
-  const defaultAvatar = "http://localhost:3500/uploads/AVATAR.png";
+  const defaultAvatar =
+    "https://techify-repairs-api.onrender.com/uploads/AVATAR.png" ||
+    "http://localhost:5173/uploads/AVATAR.png";
   // Checking if the Delete Avatar Flag was Provided
   if (req.body.deleteAvatar === "true") {
     // If Users Avatar is not Default Avatar then Proceed
